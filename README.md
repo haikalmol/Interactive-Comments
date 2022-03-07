@@ -12,11 +12,6 @@ This is a solution to the [Interactive comments section challenge on Frontend Me
 - Up-vote and down-vote comments.
 - Tracks the time dynamically since the comment or reply was posted.
 
-## Links
-
-- [Solution URL](https://github.com/arshWebDev/interactive-comments-section)
-- [Live Site URL](https://interactive-comments-section-nine.vercel.app)
-
 ## Built with
 
 - CSS custom properties
@@ -32,7 +27,3 @@ This is a solution to the [Interactive comments section challenge on Frontend Me
 
 - I still want to add the feature :
   - which sort the comments the comment of the basis of their votes
-
-## Author
-
-- Frontend Mentor - [@arshWebDev](https://www.frontendmentor.io/profile/arshWebDev)
