@@ -1,0 +1,76 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+.delete-confirmation-wrapper{
+  position: fixed;
+  z-index: 100;
+  top: 0; left: 0;
+  height: 100vh;  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba($color: #000000, $alpha: 0.3);
+
+  .delete-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    background: $white;
+    padding: 20px;
+    border-radius: 10px;
+
+    .title{
+      color: $dark-blue;
+      font-weight: $fw-bold;
+      font-size: 1.2rem;
+    }
+
+    .confirmation-message{
+      line-height: 1.5;
+      color: $grayish-blue;
+    }
+
+    .btn-container{
+      display: flex;
+      justify-content: space-between;
+
+      button{
+        color: $white;
+        text-transform: uppercase;
+        font-weight: $fw-medium;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover{
+          opacity: 0.65;
+        }
+      }
+      
+      .cancel-btn{
+        background: $grayish-blue;
+      }
+
+      .delete-btn{
+        background: $soft-red;
+        color: $white;
+      }
+    }
+
+    @include media-sm() {
+      width: 400px;
+      padding: 30px;
+
+      .btn-container {
+
+        button{
+          padding: 15px 30px;
+        }
+      }
+    }
+  }
+}

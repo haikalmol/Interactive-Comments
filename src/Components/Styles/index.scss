@@ -1,0 +1,73 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+/* ------------------- */
+/* reset */
+/* ------------------- */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+p,
+span {
+  font-weight: $fw-regular;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ------------------- */
+/* body */
+/* ------------------- */
+
+html {
+  @include support("scrollbar-width: thin") {
+    scrollbar-width: thin;
+    scrollbar-color: $grayish-blue $very-light-gray;
+  }
+}
+
+body {
+  font-family: $ff-rubik;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $very-light-gray;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $grayish-blue;
+  }
+}
+
+/* ------------------- */
+/* utility classes */
+/* ------------------- */
+
+.display--none {
+  display: none !important;
+}
+
+.overflow--hidden {
+  overflow-y: hidden;
+}
+
+::selection {
+  color: $white;
+  background: $grayish-blue;
+}
